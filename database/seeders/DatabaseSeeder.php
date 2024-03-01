@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
 use App\Models\Entrenador;
 use App\Models\Equipo;
 use App\Models\Posicion;
@@ -19,20 +17,20 @@ class DatabaseSeeder extends Seeder
     {
         $equipos = [
             [
-                'nombreEquipo' => 'Raimon',
-                'escudo' => 'storage/app/public/escudos/raimon.png',
+                'nombreEquipo' => 'Alpino',
+                'escudo' => 'storage/escudos/alpino.png',
+            ],
+            [
+                'nombreEquipo' => 'Royal Academy',
+                'escudo' => 'storage/escudos/royalAcademy.png',
+            ],
+            [
+                'nombreEquipo' => 'Alius',
+                'escudo' => 'storage/escudos/alius.png',
             ],
             [
                 'nombreEquipo' => 'Zeus',
-                'escudo' => 'storage/app/public/escudos/zeus.png',
-            ],
-            [
-                'nombreEquipo' => 'Orfeo',
-                'escudo' => 'storage/app/public/escudos/orfeo.png',
-            ],
-            [
-                'nombreEquipo' => 'Little Giants',
-                'escudo' => 'storage/app/public/escudos/littlegiants.png',
+                'escudo' => 'storage/escudos/zeus.png',
             ],
 
         ];
@@ -40,26 +38,26 @@ class DatabaseSeeder extends Seeder
         foreach ($equipos as $equipo) {
             Equipo::create($equipo);
         }
-        
+
         $trainers = [
             [
-                'nombre' => 'Seymour Hillman',
-                'foto' => 'storage/app/public/entrenadores/hillman.png',
+                'nombre' => 'alpine',
+                'foto' => 'storage/entrenadores/alpine.png',
                 'equipo_id' => 1,
             ],
             [
-                'nombre' => 'Kratos',
-                'foto' => 'storage/app/public/entrenadores/kratos.png',
+                'nombre' => 'Ray Dark',
+                'foto' => 'storage/entrenadores/raydark.png',
                 'equipo_id' => 2,
             ],
             [
-                'nombre' => 'Ray Dark',
-                'foto' => 'storage/app/public/entrenadores/raydark.png',
+                'nombre' => 'Lina Schiller',
+                'foto' => 'storage/entrenadores/linaschiller.png',
                 'equipo_id' => 3,
             ],
             [
-                'nombre' => 'David Evans',
-                'foto' => 'storage/app/public/entrenadores/davidEvans.png',
+                'nombre' => 'Kratos',
+                'foto' => 'storage/entrenadores/kratos.png',
                 'equipo_id' => 4,
             ],
         ];
@@ -82,26 +80,26 @@ class DatabaseSeeder extends Seeder
 
         $entrenadores = [
             [
-                'name' => 'hillman',
-                'email' => 'hillman@gmail.com',
+                'name' => 'alpine',
+                'email' => 'alpine@gmail.com',
                 'password' => Hash::make('12345678'),
                 'entrenador_id' => 1,
-            ],
-            [
-                'name' => 'kratos',
-                'email' => 'kratos@gmail.com',
-                'password' => Hash::make('12345678'),
-                'entrenador_id' => 2,
             ],
             [
                 'name' => 'dark',
                 'email' => 'dark@gmail.com',
                 'password' => Hash::make('12345678'),
+                'entrenador_id' => 2,
+            ],
+            [
+                'name' => 'lina',
+                'email' => 'lina@gmail.com',
+                'password' => Hash::make('12345678'),
                 'entrenador_id' => 3,
             ],
             [
-                'name' => 'evans',
-                'email' => 'evans@gmail.com',
+                'name' => 'kratos',
+                'email' => 'kratos@gmail.com',
                 'password' => Hash::make('12345678'),
                 'entrenador_id' => 4,
             ]
@@ -117,22 +115,22 @@ class DatabaseSeeder extends Seeder
             [
                 'id' => '1',
                 'posicion' => 'portero',
-                'imgPosicion' => 'storage/app/public/posiciones/GK.png',
+                'imgPosicion' => 'storage/posiciones/GK.png',
             ],
             [
                 'id' => '2',
                 'posicion' => 'defensa',
-                'imgPosicion' => 'storage/app/public/posiciones/DF.png',
+                'imgPosicion' => 'storage/posiciones/DF.png',
             ],
             [
                 'id' => '3',
                 'posicion' => 'mediocentro',
-                'imgPosicion' => 'storage/app/public/posiciones/MF.png',
+                'imgPosicion' => 'storage/posiciones/MF.png',
             ],
             [
                 'id' => '4',
                 'posicion' => 'delantero',
-                'imgPosicion' => 'storage/app/public/posiciones/FW.png',
+                'imgPosicion' => 'storage/posiciones/FW.png',
             ],
         ];
 
