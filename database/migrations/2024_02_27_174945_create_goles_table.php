@@ -12,7 +12,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('partido_id');
             $table->unsignedBigInteger('jugador_id');
-            $table->unsignedBigInteger('liga_id');
             $table->timestamps();
 
             $table->foreign('partido_id')->references('id')->on('partidos')->onDelete('cascade');

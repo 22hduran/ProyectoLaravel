@@ -13,7 +13,6 @@ return new class extends Migration
             $table->unsignedBigInteger('local_equipo_id');
             $table->unsignedBigInteger('visitante_equipo_id');
             $table->dateTime('fechaPartido');
-            $table->unsignedBigInteger('liga_id');
             $table->unsignedBigInteger('jornada_id')->nullable();
             $table->timestamps();
 

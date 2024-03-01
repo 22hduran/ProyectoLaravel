@@ -21,9 +21,4 @@ class Gol extends Model
         return $this->belongsTo(Jugador::class);
     }
 
-    public function liga()
-    {
-        return $this->belongsTo(Liga::class);
-    }
-
 }

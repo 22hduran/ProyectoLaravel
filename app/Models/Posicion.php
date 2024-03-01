@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Liga extends Model
+class Posicion extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'season'];
-    
+    protected $table = 'posiciones';
+
+    protected $fillable = ['posicion', 'imgPosicion'];
 }

@@ -11,10 +11,12 @@ return new class extends Migration
         Schema::create('jugadores', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
+            $table->string('foto');
+            $table->unsignedBigInteger('posicion_id');
             $table->unsignedBigInteger('equipo_id');
-            $table->unsignedBigInteger('liga_id');
             $table->timestamps();
 
+            $table->foreign('posicion_id')->references('id')->on('posiciones');
             $table->foreign('equipo_id')->references('id')->on('equipos')->onDelete('cascade');
         });
     }

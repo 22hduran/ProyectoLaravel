@@ -8,15 +8,16 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('ligas', function (Blueprint $table) {
+        Schema::create('posiciones', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
+            $table->string('posicion');
+            $table->string('imgPosicion');
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('ligas');
+        Schema::dropIfExists('posiciones');
     }
 };

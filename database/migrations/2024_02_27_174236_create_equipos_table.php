@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('equipos', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->unsignedBigInteger('liga_id');
+            $table->string('nombreEquipo');
+            $table->string('escudo');
             $table->timestamps();
         });
     }

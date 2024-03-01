@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Entrenador;
+use App\Models\Equipo;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -15,20 +17,12 @@ use Illuminate\View\View;
 
 class RegisteredUserController extends Controller
 {
-    /**
-     * Display the registration view.
-     */
     public function create(): View
     {
         return view('auth.register');
     }
 
-    /**
-     * Handle an incoming registration request.
-     *
-     * @throws \Illuminate\Validation\ValidationException
-     */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
@@ -36,10 +30,25 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $fotoPath = $request->file('escudo')->store('public/escudos');
+        $nombreEquipo = $request->input('nombreEquipo');
+
+        $equipo = Equipo::create([
+            'nombreEquipo' => $nombreEquipo,
+            'escudo' => $fotoPath,
+        ]);
+
+        $entrenador = Entrenador::create([
+            'nombre' => $request->name,
+            'foto' => $fotoPath,
+            'equipo_id' => $equipo->id,
+        ]);
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'entrenador_id' => $entrenador->id,
         ]);
 
         event(new Registered($user));

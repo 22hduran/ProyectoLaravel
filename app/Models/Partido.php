@@ -9,6 +9,8 @@ class Partido extends Model
 {
     use HasFactory;
 
+    protected $table = 'partidos';
+
     protected $fillable = ['local_equipo_id', 'visitante_equipo_id', 'fechaPartido'];
 
     public function equipoLocal()
@@ -24,11 +26,6 @@ class Partido extends Model
     public function goles()
     {
         return $this->hasMany(Gol::class);
-    }
-
-    public function liga()
-    {
-        return $this->belongsTo(Liga::class);
     }
 
     public function jornada()

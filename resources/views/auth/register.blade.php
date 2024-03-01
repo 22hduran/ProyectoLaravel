@@ -1,18 +1,18 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
 
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -39,6 +39,30 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
+
+         <!-- Profile Picture -->
+         <div class="mt-4">
+            <x-input-label for="foto" :value="__('Foto entrenador')" />
+
+            <input id="foto" class="block mt-1 w-full" type="file" name="foto" required accept="image/*" />
+
+            <x-input-error :messages="$errors->get('foto')" class="mt-2" />
+        </div>
+
+        <div>
+            <x-input-label for="nombreEquipo" :value="__('Nombre Equipo')" />
+            <x-text-input id="nombreEquipo" class="block mt-1 w-full" type="text" name="nombreEquipo" required />
+            <x-input-error :messages="$errors->get('nombreEquipo')" class="mt-2" />
+        </div>
+
+
+        <div class="mt-4">
+            <x-input-label for="escudo" :value="__('Escudo')" />
+
+            <input id="escudo" class="block mt-1 w-full" type="file" name="escudo" required accept="image/*" />
+
+            <x-input-error :messages="$errors->get('escudo')" class="mt-2" />
+        </div>
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
                 {{ __('Already registered?') }}

@@ -9,16 +9,12 @@ class Entrenador extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nombre', 'equipo_id'];
+    protected $table = 'entrenadores';
+    protected $fillable = ['nombre', 'foto', 'equipo_id'];
 
     public function equipo()
     {
         return $this->belongsTo(Equipo::class);
-    }
-
-    public function liga()
-    {
-        return $this->belongsTo(Liga::class);
     }
 
 }

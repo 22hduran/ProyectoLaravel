@@ -9,7 +9,9 @@ class Equipo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nombre'];
+    protected $table = 'equipos';
+
+    protected $fillable = ['nombreEquipo', 'escudo'];
 
     public function jugadores()
     {
@@ -40,9 +42,4 @@ class Equipo extends Model
     {
         return $this->hasMany(Pichichi::class);
     }
-
-    public function liga()
-{
-    return $this->belongsTo(Liga::class);
-}
 }
