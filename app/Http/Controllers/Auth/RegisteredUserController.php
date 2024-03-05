@@ -30,7 +30,7 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $fotoPath = $request->file('escudo')->store('public/escudos');
+        $fotoPath = $request->file('escudo')->store('storage/escudos');
         $nombreEquipo = $request->input('nombreEquipo');
 
         $equipo = Equipo::create([

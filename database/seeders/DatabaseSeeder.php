@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Entrenador;
 use App\Models\Equipo;
+use App\Models\Jugador;
 use App\Models\Posicion;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -41,7 +42,7 @@ class DatabaseSeeder extends Seeder
 
         $trainers = [
             [
-                'nombre' => 'alpine',
+                'nombre' => 'Alpine',
                 'foto' => 'storage/entrenadores/alpine.png',
                 'equipo_id' => 1,
             ],
@@ -113,7 +114,6 @@ class DatabaseSeeder extends Seeder
 
         $posiciones = [
             [
-                'id' => '1',
                 'posicion' => 'portero',
                 'imgPosicion' => 'storage/posiciones/GK.png',
             ],
@@ -136,6 +136,152 @@ class DatabaseSeeder extends Seeder
 
         foreach ($posiciones as $posicion) {
             Posicion::create($posicion);
+        }
+
+        $jugadores = [
+            [
+                'nombre' => 'Adam Ropes',
+                'foto' => 'storage/jugadores/Adam_Ropes.png',
+                'posicion_id' => '1',
+                'equipo_id' => '1',
+            ],
+            [
+                'nombre' => 'Joaquine Downtown',
+                'foto' => 'storage/jugadores/Joaquine_Downtown.png',
+                'posicion_id' => '2',
+                'equipo_id' => '1',
+            ],
+            [
+                'nombre' => 'Milton Bindings',
+                'foto' => 'storage/jugadores/Milton_Bindings.png',
+                'posicion_id' => '2',
+                'equipo_id' => '1',
+            ],
+            [
+                'nombre' => 'Spike Gleeson',
+                'foto' => 'storage/jugadores/Spike_Gleeson.png',
+                'posicion_id' => '2',
+                'equipo_id' => '1',
+            ],
+            [
+                'nombre' => 'Sean Snowfield',
+                'foto' => 'storage/jugadores/Sean_Snowfield.png',
+                'posicion_id' => '3',
+                'equipo_id' => '1',
+            ],
+            [
+                'nombre' => 'Kerry Bootgaiter',
+                'foto' => 'storage/jugadores/Kerry_Bootgaiter.png',
+                'posicion_id' => '3',
+                'equipo_id' => '1',
+            ],
+            [
+                'nombre' => 'Maddox Rock',
+                'foto' => 'storage/jugadores/Maddox_Rock.png',
+                'posicion_id' => '3',
+                'equipo_id' => '1',
+            ],
+            [
+                'nombre' => 'Robert Skipolson',
+                'foto' => 'storage/jugadores/Robert_Skipolson.png',
+                'posicion_id' => '3',
+                'equipo_id' => '1',
+            ],
+            [
+                'nombre' => 'Shawn Froste',
+                'foto' => 'storage/jugadores/Shawn_Froste.png',
+                'posicion_id' => '4',
+                'equipo_id' => '1',
+            ],
+            [
+                'nombre' => 'Aiden Froste',
+                'foto' => 'storage/jugadores/Aiden_Froste.png',
+                'posicion_id' => '4',
+                'equipo_id' => '1',
+            ],
+            [
+                'nombre' => 'Kevin Dragonfly',
+                'foto' => 'storage/jugadores/Kevin_Dragonfly.png',
+                'posicion_id' => '4',
+                'equipo_id' => '1',
+            ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+            // [
+            //     'nombre' => 'delantero',
+            //     'foto' => 'storage/jugadores/GK.png',
+            //     'posicion_id' => '1',
+            //     'equipo_id' => '1',
+            // ],
+        ];
+
+
+        foreach ($jugadores as $jugador) {
+            Jugador::create($jugador);
         }
 
     }
