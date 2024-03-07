@@ -1,71 +1,69 @@
 <x-app-layout>
     <style>
-        .fotoJugador {
-            max-width: 100px;
-        }
-
-        .card {
-            width: auto;
-            margin: 20px;
-            cursor: pointer;
-            transition: 0.4s;
-
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            transition: 0.4s;
-        }
-
-        section {
-            padding: 20px;
+        .header {
             display: flex;
-            flex-wrap: wrap;
-            justify-content:space-around;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 10px;
+            margin-top: 10px;
         }
-
-        .equipo {
-            width: 150px;
-            text-align: center;
-            font-weight: bold;
-            margin-left: 690px;
-            margin-bottom: 40px;
-        }
+       .divGeneral {
+        width: 50%;
+        max-height: 100vh;
+        margin-left: 400px;
+        background: url(/storage/field/field.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+       }
+       section {
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+       justify-content:space-around;
+       max-height: 100vh;
+       padding-bottom: 30px;
+       }
+       .fotoJugador {
+       max-width: 100px;
+       }
+       .card {
+        width: 150px;
+        height: 200px;
+       }
+       .escudo {
+        width: 70px;
+       }
+       h2 {
+        margin-left: 50px;
+        margin-top: 20px;
+       }
     </style>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ $equipo->nombreEquipo }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="equipo">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <img src="{{ url($equipo->escudo) }}" alt="Escudo" class="max-w-100">
-                    <p>{{ $equipo->nombreEquipo }}</p>
-                </div>
-            </div>
+        <div class="header">
+            <img src="{{ url($equipo->escudo) }}" alt="Escudo" class="escudo">
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                {{ $equipo->nombreEquipo }}
+            </h2>
         </div>
-        <h1 class="text-center text-white">JUGADORES</h1>
-        <section>     
-            @foreach ($jugadores as $jugador)
+    <div class="divGeneral">
+          <section>
+             @foreach ($jugadores as $jugador)
                 @if ($jugador->equipo_id == $equipo->id)
                     <div class="card">
-                        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                            <div class="p-6 bg-white border-b border-gray-200">
-                                <p>{{ $jugador->nombre }}</p>
-                                <img src="{{ url($jugador->foto) }}" alt="Foto" class="fotoJugador">
-                                @foreach($posiciones as $posicion)
-                                    @if($posicion->id == $jugador->posicion_id)
-                                        <img src="{{ url($posicion->imgPosicion) }}" alt="Posicion">
-                                    @endif
-                                @endforeach
-                            </div>
+                        <div>
+                            <img src="{{ url($jugador->foto) }}" alt="Foto" class="fotoJugador">
+                            @foreach($posiciones as $posicion)
+                                @if($posicion->id == $jugador->posicion_id)
+                                    <img src="{{ url($posicion->imgPosicion) }}" alt="Posicion" class="posicion" class="text-right">
+                                @endif
+                            @endforeach
+                        </div>
+                        <div class="overflow-hidden shadow-sm sm:rounded-lg">
+                            <p class="text-center">{{ $jugador->nombre }}</p>
                         </div>
                     </div>
-                @endif
-            @endforeach
-        </section>
+                 @endif
+             @endforeach
+          </section>
     </div>
-</x-app-layout>
+ </x-app-layout>
