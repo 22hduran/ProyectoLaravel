@@ -139,6 +139,7 @@ class DatabaseSeeder extends Seeder
         }
 
         $jugadores = [
+            //ALPINO
             [
                 'nombre' => 'Adam Ropes',
                 'foto' => 'storage/jugadores/Adam_Ropes.png',
@@ -205,78 +206,207 @@ class DatabaseSeeder extends Seeder
                 'posicion_id' => '4',
                 'equipo_id' => '1',
             ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
-            // [
-            //     'nombre' => 'delantero',
-            //     'foto' => 'storage/jugadores/GK.png',
-            //     'posicion_id' => '1',
-            //     'equipo_id' => '1',
-            // ],
+            //ROYAL ACADEMY
+            [
+                'nombre' => 'Joseph King',
+                'foto' => 'storage/jugadores/Joseph_King.png',
+                'posicion_id' => '1',
+                'equipo_id' => '2',
+            ],
+            [
+                'nombre' => 'Nathan Swift',
+                'foto' => 'storage/jugadores/Nathan_Swift.png',
+                'posicion_id' => '2',
+                'equipo_id' => '2',
+            ],
+            [
+                'nombre' => 'Peter Drent',
+                'foto' => 'storage/jugadores/Peter_Drent.png',
+                'posicion_id' => '2',
+                'equipo_id' => '2',
+            ],
+            [
+                'nombre' => 'Ben Simmons',
+                'foto' => 'storage/jugadores/Ben_Simmons.png',
+                'posicion_id' => '2',
+                'equipo_id' => '2',
+            ],
+            [
+                'nombre' => 'Alan Master',
+                'foto' => 'storage/jugadores/Alan_Master.png',
+                'posicion_id' => '2',
+                'equipo_id' => '2',
+            ],
+            [
+                'nombre' => 'Herman Waldon',
+                'foto' => 'storage/jugadores/Herman_Waldon.png',
+                'posicion_id' => '3',
+                'equipo_id' => '2',
+            ],
+            [
+                'nombre' => 'John Bloom',
+                'foto' => 'storage/jugadores/John_Bloom.png',
+                'posicion_id' => '3',
+                'equipo_id' => '2',
+            ],
+            [
+                'nombre' => 'Derek Swing',
+                'foto' => 'storage/jugadores/Derek_Swing.png',
+                'posicion_id' => '3',
+                'equipo_id' => '2',
+            ],
+            [
+                'nombre' => 'Caleb Stonewall',
+                'foto' => 'storage/jugadores/Caleb_Stonewall.png',
+                'posicion_id' => '3',
+                'equipo_id' => '2',
+            ],
+            [
+                'nombre' => 'Daniel Hatch',
+                'foto' => 'storage/jugadores/Daniel_Hatch.png',
+                'posicion_id' => '4',
+                'equipo_id' => '2',
+            ],
+            [
+                'nombre' => 'David Samford',
+                'foto' => 'storage/jugadores/David_Samford.png',
+                'posicion_id' => '4',
+                'equipo_id' => '2',
+            ],
+            //ALIUS
+            [
+                'nombre' => 'Dave Quagmire',
+                'foto' => 'storage/jugadores/Dave_Quagmire.png',
+                'posicion_id' => '1',
+                'equipo_id' => '3',
+            ],
+            [
+                'nombre' => 'Ben Blowton',
+                'foto' => 'storage/jugadores/Ben_Blowton.png',
+                'posicion_id' => '2',
+                'equipo_id' => '3',
+            ],
+            [
+                'nombre' => 'Claire Lesnow',
+                'foto' => 'storage/jugadores/Claire_Lesnow.png',
+                'posicion_id' => '2',
+                'equipo_id' => '3',
+            ],
+            [
+                'nombre' => 'Grant Icewater',
+                'foto' => 'storage/jugadores/Grant_Icewater.png',
+                'posicion_id' => '2',
+                'equipo_id' => '3',
+            ],
+            [
+                'nombre' => 'Nigel August',
+                'foto' => 'storage/jugadores/Nigel_August.png',
+                'posicion_id' => '3',
+                'equipo_id' => '3',
+            ],
+            [
+                'nombre' => 'Isabelle Trick',
+                'foto' => 'storage/jugadores/Isabelle_Trick.png',
+                'posicion_id' => '3',
+                'equipo_id' => '3',
+            ],
+            [
+                'nombre' => 'Jordan Greenway',
+                'foto' => 'storage/jugadores/Jordan_Greenway.png',
+                'posicion_id' => '3',
+                'equipo_id' => '3',
+            ],
+            [
+                'nombre' => 'Bryce Whitingale',
+                'foto' => 'storage/jugadores/Bryce_Whitingale.png',
+                'posicion_id' => '4',
+                'equipo_id' => '3',
+            ],
+            [
+                'nombre' => 'Claude Beacons',
+                'foto' => 'storage/jugadores/Claude_Beacons.png',
+                'posicion_id' => '4',
+                'equipo_id' => '3',
+            ],
+            [
+                'nombre' => 'Hunter Foster',
+                'foto' => 'storage/jugadores/Hunter_Foster.png',
+                'posicion_id' => '4',
+                'equipo_id' => '3',
+            ],
+            [
+                'nombre' => 'Xavier Schiller',
+                'foto' => 'storage/jugadores/Xavier_Schiller.png',
+                'posicion_id' => '4',
+                'equipo_id' => '3',
+            ],
+            //ZEUS
+            [
+                'nombre' => 'Ross Sidon',
+                'foto' => 'storage/jugadores/Ross_Sidon.png',
+                'posicion_id' => '1',
+                'equipo_id' => '4',
+            ],
+            [
+                'nombre' => 'Lane War',
+                'foto' => 'storage/jugadores/Lane_War.png',
+                'posicion_id' => '2',
+                'equipo_id' => '4',
+            ],
+            [
+                'nombre' => 'Hadrian Diesel',
+                'foto' => 'storage/jugadores/Hadrian_Diesel.png',
+                'posicion_id' => '2',
+                'equipo_id' => '4',
+            ],
+            [
+                'nombre' => 'Dany Wood',
+                'foto' => 'storage/jugadores/Dany_Wood.png',
+                'posicion_id' => '2',
+                'equipo_id' => '4',
+            ],
+            [
+                'nombre' => 'Apollo Light',
+                'foto' => 'storage/jugadores/Apollo_Light.png',
+                'posicion_id' => '2',
+                'equipo_id' => '4',
+            ],
+            [
+                'nombre' => 'Arion Matlock',
+                'foto' => 'storage/jugadores/Arion_Matlock.png',
+                'posicion_id' => '3',
+                'equipo_id' => '4',
+            ],
+            [
+                'nombre' => 'Artie Mishman',
+                'foto' => 'storage/jugadores/Artie_Mishman.png',
+                'posicion_id' => '3',
+                'equipo_id' => '4',
+            ],
+            [
+                'nombre' => 'Wesley Knox',
+                'foto' => 'storage/jugadores/Wesley_Knox.png',
+                'posicion_id' => '3',
+                'equipo_id' => '4',
+            ],
+            [
+                'nombre' => 'Jonas Demetrius',
+                'foto' => 'storage/jugadores/Jonas_Demetrius.png',
+                'posicion_id' => '4',
+                'equipo_id' => '4',
+            ],
+            [
+                'nombre' => 'Byron Love',
+                'foto' => 'storage/jugadores/Byron_Love.png',
+                'posicion_id' => '4',
+                'equipo_id' => '4',
+            ],
+            [
+                'nombre' => 'Percy Rust',
+                'foto' => 'storage/jugadores/Percy_Rust.png',
+                'posicion_id' => '4',
+                'equipo_id' => '4',
+            ],
         ];
 
 
