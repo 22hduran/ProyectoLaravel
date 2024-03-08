@@ -13,7 +13,6 @@
         .card {
          width: 200px;
          padding: 5px;
-         background-color: #e4e4e4;
          border-radius: 10px;
          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
          margin: 15px;
@@ -46,7 +45,7 @@
                             <div class="card">
                                 <img src="{{$equipo->escudo}}" alt="Escudo">
                                 <div class="card-content">
-                                    <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-800 mb-2 capitalize text-center">{{ strtoupper($equipo->nombreEquipo) }}</h3>
+                                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2 capitalize text-center">{{ strtoupper($equipo->nombreEquipo) }}</h3>
                                 </div>
                             </div>
                         </a>
