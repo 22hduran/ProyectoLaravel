@@ -114,22 +114,19 @@ class DatabaseSeeder extends Seeder
 
         $posiciones = [
             [
-                'posicion' => 'portero',
+                'posicion' => 'Portero',
                 'imgPosicion' => 'storage/posiciones/GK.png',
             ],
             [
-                'id' => '2',
-                'posicion' => 'defensa',
+                'posicion' => 'Defensa',
                 'imgPosicion' => 'storage/posiciones/DF.png',
             ],
             [
-                'id' => '3',
-                'posicion' => 'mediocentro',
+                'posicion' => 'Mediocentro',
                 'imgPosicion' => 'storage/posiciones/MF.png',
             ],
             [
-                'id' => '4',
-                'posicion' => 'delantero',
+                'posicion' => 'Delantero',
                 'imgPosicion' => 'storage/posiciones/FW.png',
             ],
         ];

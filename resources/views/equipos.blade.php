@@ -22,7 +22,7 @@
          .card:hover {
          transform: scale(1.03);
          }
-        .card img {
+         .card img {
          width: 100%;
          object-fit: contain;
          }

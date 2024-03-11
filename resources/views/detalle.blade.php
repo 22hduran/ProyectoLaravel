@@ -4,12 +4,12 @@
             background-color: #111827;
         }
         .header {
-            display: flex;
-            width: 100%;
-            flex-direction: row;
-            justify-content: center;
-            margin-bottom: 10px;
-            margin-top: 10px;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
         }
         .divGeneral {
         width: 60%;
@@ -18,36 +18,36 @@
         background-image: url(/storage/field/field.svg);
         background-size: cover;
         background-repeat: no-repeat;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         }
         section {
-            display: grid;
-            grid-template-rows: repeat(4, 1fr);
-            padding: 10px;
-            height: 100vh;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        padding: 10px;
+        height: 100vh;
         }
         .fotoJugador {
-            max-width: 100px;
+        max-width: 100px;
         }
         .jugador {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         }
         .card1, .card2, .card3, .card4 {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: auto;
-            gap: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+        gap: 70px;
         }
         .escudo {
-            width: 50px;
+        width: 50px;
         }
         h2 {
-            margin-left: 30px;
-            margin-top: 15px;
+        margin-left: 30px;
+        margin-top: 15px;
         }
     </style>
     <div class="header">
