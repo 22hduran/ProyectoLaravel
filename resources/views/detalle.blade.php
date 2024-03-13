@@ -1,15 +1,8 @@
 <x-app-layout>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #111827;
-        }
-        .header {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 10px;
-        margin-top: 10px;
+        background-color: #111827;
         }
         .divGeneral {
         width: 60%;
@@ -20,22 +13,6 @@
         background-repeat: no-repeat;
         margin-bottom: 30px;
         }
-        section {
-        display: grid;
-        grid-template-rows: repeat(4, 1fr);
-        padding: 10px;
-        height: 100vh;
-        }
-        .fotoJugador {
-        max-width: 100px;
-        max-height: 100px;
-        }
-        .jugador {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        }
         .card1, .card2, .card3, .card4 {
         display: flex;
         flex-direction: row;
@@ -43,28 +20,21 @@
         width: auto;
         gap: 70px;
         }
-        .escudo {
-        width: 50px;
-        }
-        h2 {
-        margin-left: 30px;
-        margin-top: 15px;
-        }
     </style>
-    <div class="header">
-        <img src="{{ url($equipo->escudo) }}" alt="Escudo" class="escudo">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+    <div class="flex w-full flex-row justify-center mb-4 mt-3">
+        <img src="{{ url($equipo->escudo) }}" alt="Escudo" class="w-12">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight mt-4 ml-7">
             {{ $equipo->nombreEquipo }}
         </h2>
     </div>
     <div class="divGeneral">
-        <section>
+        <section class="grid grid-rows-4 p-3 h-screen">
             @for ($i = 1; $i <= 4; $i++)
                 <div class="card{{ $i }}">
                     @foreach ($jugadores as $jugador)
                         @if ($jugador->equipo_id == $equipo->id && $jugador->posicion_id == $i)
-                            <div class="jugador">
-                                <img src="{{ url($jugador->foto) }}" alt="Foto" class="fotoJugador">
+                            <div class="flex items-center flex-col justify-center">
+                                <img src="{{ url($jugador->foto) }}" alt="Foto" class="max-w-24 max-h-24">
                                 @foreach($posiciones as $posicion)
                                     @if($posicion->id == $jugador->posicion_id)
                                         <img src="{{ url($posicion->imgPosicion) }}" alt="Posicion" class="posicion" class="text-right">

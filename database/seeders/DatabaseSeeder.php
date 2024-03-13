@@ -144,7 +144,7 @@ class DatabaseSeeder extends Seeder
                 'equipo_id' => '1',
             ],
             [
-                'nombre' => 'Joaquine Downtown',
+                'nombre' => 'Joaquine Town',
                 'foto' => 'storage/jugadores/Joaquine_Downtown.png',
                 'posicion_id' => '2',
                 'equipo_id' => '1',

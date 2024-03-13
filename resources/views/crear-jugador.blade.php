@@ -1,9 +1,4 @@
 <x-app-layout>
-    <style>
-        input[type="text"] {
-            color: black;
-        }
-    </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-white leading-tight">
@@ -23,7 +18,7 @@
                                     Nombre del jugador
                                 </label>
                                 <input
-                                    class="shadow appearance-none border rounded py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                                    class="shadow appearance-none border rounded py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                                     id="nombre" type="text" placeholder="Nombre del jugador" name="nombre">
                             </div>
                             <div class="mb-4 p-2">
