@@ -1,4 +1,9 @@
 <x-app-layout>
+    <style>
+        input[type="text"] {
+            color: black;
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-white leading-tight">
@@ -22,13 +27,13 @@
                                     id="nombre" type="text" placeholder="Nombre del jugador" name="nombre">
                             </div>
                             <div class="mb-4 p-2">
-                                <label class="block text-white text-sm font-bold mb-2" for="imagen">
+                                <label class="block text-white text-sm font-bold mb-2" for="foto">
                                     Foto del jugador
                                 </label>
-                                <input type="file" name="imagen">
+                                <input type="file" name="foto">
                             </div>
                             <div class="mb-4 p-2">
-                                <label class="block text-white text-sm font-bold mb-2" for="imagen">
+                                <label class="block text-white text-sm font-bold mb-2" for="equipo">
                                     Equipo
                                 </label>
                                 <select name="equipo" id="equipo" class="border rounded py-2 px-3">
