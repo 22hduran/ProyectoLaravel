@@ -9,9 +9,6 @@ use Illuminate\Http\Request;
 
 class JugadorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         //
@@ -45,16 +42,29 @@ class JugadorController extends Controller
 
     public function edit(string $id)
     {
-        //
+        $jugador = Jugador::find($id);
+        return view("editar-jugador", ['jugador' => $jugador]);
     }
 
     public function update(Request $request, string $id)
     {
-        //
+        $jugador = Jugador::find($id);
+        $jugador->nombre = $request->nombre;
+        if ($request->hasFile('foto')) {
+            $fotoPath = $request->file('foto')->store('jugadores', 'public');
+            $jugador->foto = 'storage/' . $fotoPath;
+        }
+        $jugador->equipo_id = $request->equipo;
+        $jugador->posicion_id = $request->posicion;
+        $jugador->save();
+        return redirect('dashboard');
     }
 
     public function destroy(string $id)
     {
-        //
+        $jugador = Jugador::findOrFail($id);
+        $jugador->delete();
+
+        return redirect('/dashboard');
     }
 }
