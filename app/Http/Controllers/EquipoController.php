@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Entrenador;
 use App\Models\Equipo;
 use App\Models\Jugador;
 use App\Models\Posicion;
@@ -14,11 +15,6 @@ class EquipoController extends Controller
     {
         $equipos = Equipo::all();
         return view('equipos', ['equipos' => $equipos]);
-    }
-
-    public function mostrarDetalles($id)
-    {
-
     }
 
     public function index()
@@ -47,8 +43,9 @@ class EquipoController extends Controller
         $equipo = Equipo::findOrFail($equipo);
         $jugadores = Jugador::all();
         $posiciones = Posicion::all();
+        $entrenadores = Entrenador::all();
     
-        return view('detalle', ['equipo' => $equipo, 'jugadores' => $jugadores, 'posiciones' => $posiciones]);
+        return view('detalle', ['equipo' => $equipo, 'jugadores' => $jugadores, 'posiciones' => $posiciones, 'entrenadores' => $entrenadores]);
     }
     
 

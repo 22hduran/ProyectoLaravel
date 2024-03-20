@@ -12,6 +12,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         margin-bottom: 30px;
+        z-index: 9;
         }
         .card1, .card2, .card3, .card4 {
         display: flex;
@@ -21,12 +22,21 @@
         gap: 70px;
         }
     </style>
-    <div class="flex w-full flex-row justify-center mb-4 mt-3">
+    <div class="flex w-full flex-row justify-center mb-4 mt-3 ">
         <img src="{{ url($equipo->escudo) }}" alt="Escudo" class="w-12">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight mt-4 ml-7">
             {{ $equipo->nombreEquipo }}
         </h2>
     </div>
+    <div class="w-32 z-10 absolute" style="margin-left:328px;">
+        @foreach ($entrenadores as $entrenador)
+            @if ($entrenador->equipo_id == $equipo->id)
+                <p class="text-black font-bold text-center">ENTRENADOR</p>
+                <img src="{{url($entrenador->foto)}}" alt="" class="h-24 w-24 ml-3.5 mt-4 border border-solid border-black rounded-full bg-white">
+                <p class="text-black text-center">{{ strtoupper($entrenador->nombre) }}</p>
+            @endif
+        @endforeach
+    </div>    
     <div class="divGeneral">
         <section class="grid grid-rows-4 p-3 h-screen">
             @for ($i = 1; $i <= 4; $i++)

@@ -30,17 +30,18 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $fotoPath = $request->file('escudo')->store('storage/escudos');
+        $escudoPath = $request->file('escudo')->store('escudos', 'public');
+        $fotoPath = $request->file('foto')->store('entrenadores', 'public');
         $nombreEquipo = $request->input('nombreEquipo');
 
         $equipo = Equipo::create([
             'nombreEquipo' => $nombreEquipo,
-            'escudo' => $fotoPath,
+            'escudo' => 'storage/'.$escudoPath,
         ]);
 
         $entrenador = Entrenador::create([
             'nombre' => $request->name,
-            'foto' => $fotoPath,
+            'foto' => 'storage/'.$fotoPath,
             'equipo_id' => $equipo->id,
         ]);
 
