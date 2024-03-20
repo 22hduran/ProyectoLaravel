@@ -38,6 +38,11 @@ class Equipo extends Model
         return $this->hasOne(Clasificacion::class);
     }
 
+    public function clasificaciones()
+    {
+        return $this->hasMany(Clasificacion::class, 'equipo_id');
+    }
+
     public function pichichi()
     {
         return $this->hasMany(Pichichi::class);

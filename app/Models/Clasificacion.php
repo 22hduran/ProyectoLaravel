@@ -9,10 +9,13 @@ class Clasificacion extends Model
 {
     use HasFactory;
 
+    protected $table = 'clasificacion';
+
     protected $fillable = ['equipo_id', 'partidos', 'victorias', 'empates', 'derrotas', 'golesFavor', 'golesContra', 'puntos'];
 
     public function equipo()
     {
-        return $this->belongsTo(Equipo::class);
+        return $this->belongsTo(Equipo::class, 'equipo_id');
     }
+
 }

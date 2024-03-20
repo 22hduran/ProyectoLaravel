@@ -43,7 +43,10 @@ class JugadorController extends Controller
     public function edit(string $id)
     {
         $jugador = Jugador::find($id);
-        return view("editar-jugador", ['jugador' => $jugador]);
+        $equipos = Equipo::all();
+        $posiciones = Posicion::all();
+        $this->authorize('update', $jugador);
+        return view("editar-jugador", ['jugador' => $jugador, 'equipos' => $equipos, 'posiciones' => $posiciones]);
     }
 
     public function update(Request $request, string $id)
@@ -57,7 +60,7 @@ class JugadorController extends Controller
         $jugador->equipo_id = $request->equipo;
         $jugador->posicion_id = $request->posicion;
         $jugador->save();
-        return redirect('dashboard');
+        return redirect('equipos');
     }
 
     public function destroy(string $id)
@@ -65,6 +68,6 @@ class JugadorController extends Controller
         $jugador = Jugador::findOrFail($id);
         $jugador->delete();
 
-        return redirect('/dashboard');
+        return redirect('/equipos');
     }
 }

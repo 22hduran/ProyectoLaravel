@@ -12,8 +12,13 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    @role('admin')
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
+                    </x-nav-link>
+                    @endrole
+                    <x-nav-link :href="route('clasificacion')" :active="request()->routeIs('clasificacion')">
+                        {{ __('Clasificacion') }}
                     </x-nav-link>
                     <x-nav-link :href="route('equipos')" :active="request()->routeIs('equipos')">
                         {{ __('Equipos') }}

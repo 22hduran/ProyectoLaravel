@@ -10,7 +10,7 @@
         <div class="mx-auto sm:px-6 lg:px-8">
                 <div class="text-gray-900 dark:text-gray-500 ml-36">
                     <div class="mx-auto">
-                        <form action="{{route('jugadores.update', ['jugador'=>$jugador->id])}}" class="w-96 dark:bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-8 border border-black"
+                        <form action="{{route('jugadores.update', ['jugadore'=>$jugador->id])}}" class="w-96 dark:bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-8 border border-black"
                             method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
@@ -50,7 +50,7 @@
                             </div>
                             <div class="flex items-center justify-between p-2">
                                 <button class="dark:bg-blue-400 dark:hover:bg-blue-500 dark:text-black border border-solid border-black font-bold py-2 px-4 rounded" type="submit">
-                                    CREAR JUGADOR
+                                    EDITAR JUGADOR
                                 </button>
                             </div>
                         </form>

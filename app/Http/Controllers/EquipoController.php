@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 class EquipoController extends Controller
 {
+
     public function mostrarEquipos()
     {
         $equipos = Equipo::all();
@@ -17,11 +18,52 @@ class EquipoController extends Controller
 
     public function mostrarDetalles($id)
     {
-        $equipo = Equipo::findOrFail($id);
-        $jugadores = Jugador::all();
-        $posiciones = Posicion::all();
 
-        return view('detalle', ['equipo' => $equipo, 'jugadores' => $jugadores, 'posiciones' => $posiciones]);
     }
 
+    public function index()
+    {
+        //
+    }
+
+    public function create()
+    {
+        return view('crear-equipo');
+    }
+
+    public function store(Request $request)
+    {
+        $equipo = new Equipo();
+        $equipo->nombreEquipo = $request->nombreEquipo;
+        $path = $request->file('escudo')->store('escudos', 'public');
+        $equipo->escudo = 'storage/'.$path;
+        $equipo->save();
+
+        return view('dashboard');
+    }
+
+    public function show(string $equipo)
+    {
+        $equipo = Equipo::findOrFail($equipo);
+        $jugadores = Jugador::all();
+        $posiciones = Posicion::all();
+    
+        return view('detalle', ['equipo' => $equipo, 'jugadores' => $jugadores, 'posiciones' => $posiciones]);
+    }
+    
+
+    public function edit(string $id)
+    {
+        //
+    }
+
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    public function destroy(string $id)
+    {
+        //
+    }
 }

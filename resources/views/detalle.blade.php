@@ -41,6 +41,16 @@
                                     @endif
                                 @endforeach
                                 <h3 class="text-center">{{ $jugador->nombre }}</h3>
+                                @can('update', $jugador)
+                                <a href="{{ route('jugadores.edit', ['jugadore' => $jugador->id]) }}" class="bg-white hover:bg-gray-300 text-white font-bold rounded -ml-12">✏️</a>
+                                @endcan
+                                @can('delete', $jugador)
+                                <form action="{{ route('jugadores.destroy', ['jugadore' => $jugador->id]) }}" method="POST" class="-mt-6 ml-12">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold rounded">🗑️</button>
+                                </form>
+                                @endcan
                             </div>
                         @endif
                     @endforeach

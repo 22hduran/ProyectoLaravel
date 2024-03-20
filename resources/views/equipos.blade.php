@@ -11,7 +11,7 @@
              <section class="p-5 flex justify-around flex-wrap">
                 @if ($equipos)
                     @foreach ($equipos as $equipo)
-                        <a href="{{ route('equipos.show', ['id' => $equipo->id]) }}">
+                        <a href="{{ route('equipos.show', ['equipo' => $equipo->id]) }}">
                             <div class="w-52 p-1 m-4 rounded-md overflow-hidden shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105">
                                 <img src="{{$equipo->escudo}}" alt="Escudo" class="w-full h-24 object-contain">
                                 <div class="p-4">
