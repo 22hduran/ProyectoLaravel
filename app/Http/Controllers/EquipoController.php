@@ -51,12 +51,22 @@ class EquipoController extends Controller
 
     public function edit(string $id)
     {
-        //
+        $equipo = Equipo::findOrFail($id);
+        $this->authorize('update', $equipo);
+        return view("editar-equipo", compact('equipo'));
     }
+    
 
     public function update(Request $request, string $id)
     {
-        //
+        $equipo = Equipo::find($id);
+        $equipo->nombreEquipo = $request->nombreEquipo;
+        if ($request->hasFile('escudo')) {
+            $escudoPath = $request->file('escudo')->store('escudos', 'public');
+            $equipo->escudo = 'storage/' . $escudoPath;
+        }
+        $equipo->save();
+        return redirect('equipos');
     }
 
     public function destroy(string $id)

@@ -7,7 +7,7 @@ use App\Http\Controllers\JornadaController;
 use App\Http\Controllers\JugadorController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [EquipoController::class, 'mostrarEquipos'])->middleware(['auth', 'verified'])->name('equipos');
+Route::get('/', [ClasificacionController::class, 'mostrarClasificacion'])->middleware(['auth', 'verified']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

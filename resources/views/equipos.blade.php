@@ -16,6 +16,9 @@
                                 <img src="{{$equipo->escudo}}" alt="Escudo" class="w-full h-24 object-contain">
                                 <div class="p-4">
                                     <h3 class="text-lg font-semibold text-gray-800 dark:text-black mb-2 capitalize text-center">{{ strtoupper($equipo->nombreEquipo) }}</h3>
+                                    @can('update', $equipo)
+                                        <a href="{{ route('equipos.edit', ['equipo' => $equipo->id]) }}" class="bg-white hover:bg-gray-300 text-white font-bold rounded">✏️</a>
+                                    @endcan
                                 </div>
                             </div>
                         </a>
