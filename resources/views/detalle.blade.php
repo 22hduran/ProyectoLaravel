@@ -2,7 +2,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-        background-color: #111827;
+        background-color: #d2d2d2;
         }
         .divGeneral {
         width: 60%;
@@ -24,7 +24,7 @@
     </style>
     <div class="flex w-full flex-row justify-center mb-4 mt-3 ">
         <img src="{{ url($equipo->escudo) }}" alt="Escudo" class="w-12">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight mt-4 ml-7">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-black leading-tight mt-4 ml-7">
             {{ $equipo->nombreEquipo }}
         </h2>
     </div>

@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-black leading-tight">
             {{ __('Clasificacion') }}
         </h2>
     </x-slot>
@@ -8,7 +8,7 @@
     <div class="flex justify-center">
         <div class="w-full sm:w-11/12 lg:w-10/12">
             <div class="overflow-x-auto">
-                <table class="min-w-full border-collapse border border-gray-200 shadow-md bg-white rounded-lg">
+                <table class="min-w-full border-collapse border border-gray-400 shadow-xl bg-white rounded-lg mt-4">
                     <thead>
                         <tr>
                             <th class="px-6 py-3 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Escudo</th>
