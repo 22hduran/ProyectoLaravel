@@ -11,17 +11,18 @@ class Partido extends Model
 
     protected $table = 'partidos';
 
-    protected $fillable = ['local_equipo_id', 'visitante_equipo_id', 'fechaPartido'];
+    protected $fillable = ['local_equipo_id', 'visitante_equipo_id'];
 
-    public function equipoLocal()
+    public function local()
     {
         return $this->belongsTo(Equipo::class, 'local_equipo_id');
     }
 
-    public function equipoVisitante()
+    public function visitante()
     {
         return $this->belongsTo(Equipo::class, 'visitante_equipo_id');
     }
+
 
     public function goles()
     {

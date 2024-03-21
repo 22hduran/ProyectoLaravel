@@ -12,8 +12,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('local_equipo_id');
             $table->unsignedBigInteger('visitante_equipo_id');
-            $table->dateTime('fechaPartido');
             $table->unsignedBigInteger('jornada_id')->nullable();
+            $table->integer('goles_local')->default(0);
+            $table->integer('goles_visitante')->default(0);
             $table->timestamps();
 
             $table->foreign('local_equipo_id')->references('id')->on('equipos')->onDelete('cascade');

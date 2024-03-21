@@ -10,9 +10,9 @@ return new class extends Migration
     {
         Schema::create('jornadas', function (Blueprint $table) {
             $table->id();
-            $table->integer('numero');
-            $table->date('fechaInicio');
-            $table->date('fechaFinal');
+            // $table->integer('numero');
+            // $table->date('fechaInicio');
+            // $table->date('fechaFinal');
             $table->timestamps();
         });
     }

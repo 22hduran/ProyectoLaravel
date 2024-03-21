@@ -9,5 +9,5 @@ class Jornada extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['numero', 'fechaInicio', 'fechaFinal'];
+    protected $table = 'jornadas';
 }
